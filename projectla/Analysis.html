@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title> Student Academic Performance - Analysis</title>
+        <meta name="description" content="website description" />
+        <meta name="keywords" content="website keywords, website keywords" />
+        <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+        <link rel="stylesheet" type="text/css" href="style/style.css" />
+        <link rel="stylesheet" href="style/fontawesome/css/all.css">
+        <link rel="stylesheet" href="style/custombox.min.css">
+        <script src="js/custombox.min.js"></script>
+        <script src="js/custombox.legacy.min.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+    </head>
+
+    <body>
+        <div id="main">
+            <div id="header">
+                <div id="logo">
+                    <div id="logo_text">
+                        <!-- class="logo_colour", allows you to change the colour of the text -->
+                        <!--<h1><a href="index.html">textured_<span class="logo_colour">orbs</span></a></h1>-->
+                        <h1>Student Academic Performance</h1>
+                    </div>
+                </div>
+                <div id="menubar">
+                    <ul id="menu">
+                        <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="DataSets.html"><i class="fas fa-database"></i> DataSets</a></li>
+                        <li><a href="students.php"><i class="fas fa-chalkboard-teacher"></i> Students</a></li>
+                        <li class="selected"><a href="Analysis.html"><i class="fas fa-chart-bar"></i> Analysis</a></li>
+                        <!-- <li><a href="contact.html">Contact Us</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <!-- insert the page content here -->
+                <h1 class="title">Analysis</h1>
+                <center>
+                <div class="main_cat">
+                    <button class="analysis_button_main demo" id="demo"><i class="fas fa-2x fa-users"></i><br/> Demographic Analysis</button>
+                    <button class="analysis_button_main aca" id="aca"><i class="fa-book-reader fas fa-2x"></i><br/> Academic Background Analysis</button>
+                    <button class="analysis_button_main beh" id="beh"><i class="fas fa-hands-helping fa-2x"></i><br/>Behavioral Analysis</button>
+                    <button class="analysis_button_main mla" id="mla"><i class="fas fa-cogs fa-2x"></i><br/>Machine Learning Analysis</button>
+                </div>
+                <div id="demoMenu" style="display: none;" class="subbutton">
+                    <button class="analysis_button demo" htmlPage="gender">Gender</button>
+                    <button class="analysis_button demo" htmlPage="nationality">Nationality</button>
+                    <button class="analysis_button demo" htmlPage="birthplace">Place of birth</button>
+                    <button class="analysis_button demo" htmlPage="relation">Relation</button>
+                </div>
+                <div id="acaMenu" style="display: none;" class="subbutton">
+                    <button class="analysis_button aca" htmlPage="educationalstage">Educational Stages</button>
+                    <button class="analysis_button aca" htmlPage="grade">Grade Levels</button>
+                    <button class="analysis_button aca" htmlPage="section">Section ID</button>
+                    <button class="analysis_button aca" htmlPage="topic">Topic</button><br/>
+                    <button class="analysis_button aca" htmlPage="semester" >Semester</button>
+                    <button class="analysis_button aca" htmlPage="absencedays" >Student Absence Days</button>
+                    <button class="analysis_button aca" htmlPage="parentsurvey" >Parent Answering Survey</button>
+                    <button class="analysis_button aca" htmlPage="parentsatisfaction" >Parent School Satisfaction</button>
+                </div>
+                <div id="behMenu" style="display: none;" class="subbutton">
+                    <button class="analysis_button beh" htmlPage="discuss">Discussion Groups</button>
+                    <button class="analysis_button beh" htmlPage="visitted">Visited Resources</button>
+                    <button class="analysis_button beh" htmlPage="raisedhand">Raised Hand On Class</button>
+                    <button class="analysis_button beh" htmlPage="view">Viewing Announcements</button>
+                </div>
+                <div id="mlaMenu" style="display: none;" class="subbutton">
+                    <button class="analysis_button mla" htmlPage="accuracy">Classifier Ranking</button>
+                    <button class="analysis_button mla" htmlPage="feature">Feature Importance</button>
+                </div>
+                </center>
+
+                <div id="modal">
+                </div>
+            </div>
+            <div id="footer">
+                <p><a>Fangzheng Ji</a> | <a>Jihao Zhang</a> | <a>Damera Ritesh</a> | <a>Shahrzad Amini</a> | <a>Jaleh Ghorbani</a> </p>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".analysis_button_main").click(function () {
+                    $(".subbutton").hide();
+                    $("#" + this.id + "Menu").show();
+                })
+                $(".analysis_button").click(function () {
+                    var modal = new Custombox.modal({
+                        content: {
+                            effect: 'fadein',
+                            target: '#modal'
+                        },
+                        onClose: $("#modal").hide(),
+                        close: true
+                    });
+                    var page = $(this).attr('htmlPage');
+                    $("#modal").load("charts/" + page + ".htm");
+                    modal.open();
+                })
+//                
+            });
+        </script>
+    </body>
+</html>

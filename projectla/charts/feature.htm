@@ -1,0 +1,71 @@
+
+<script src="js/highcharts.js"></script>
+<script src="js/highcharts-more.js"></script>
+<script src="js/modules/exporting.js"></script>
+<script src="js/modules/export-data.js"></script>
+
+
+<div id="container" style="width: 800px; height: 400px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+		
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Feature importance'
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Discussion', 'VisitedResources', 'RaisedHands', 'AnnouncementsView', 'Topic', 'GradeID', 'Nationality', 'ParentAnsweringSurvey','StudentAbsenceDays','Gender', 'Relation', 'PlaceOfBirth', 'SectionID', 'ParentschoolSatisfaction', 'StageID', 'Semester'],
+        title: {
+            text: 'Features'
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'F score',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' '
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: 0,
+        y: 80,
+        floating: true,
+        borderWidth: 0,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Score',
+        data: [1089,1060,984,944,534,347,310,301,264,220,184,180,155,145,139,118]
+		
+    
+    }]
+});
+		</script>

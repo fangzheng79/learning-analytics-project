@@ -1,0 +1,69 @@
+
+<script src="js/highcharts.js"></script>
+<script src="js/modules/exporting.js"></script>
+<script src="js/modules/export-data.js"></script>
+
+<div id="container" style="width: 800px; height: 500px; margin: 0 auto"></div>
+
+
+<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Accuracy of Algorithm'
+    },
+    subtitle: {
+      
+    },
+    xAxis: {
+        categories: ['SVM', 'XGBoost', 'Random Forest', 'Logistic Regression', 'KNN'],
+        title: {
+            text: 'Classifier'
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'ACCURACY',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: '%'
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: 0,
+        y: 30,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Accuracy',
+        data: [0.8333,0.8229,0.8229,0.7395,0.6354]
+    
+    }]
+});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<script src="js/highcharts.js"></script>
+<script src="js/modules/exporting.js"></script>
+<script src="js/modules/export-data.js"></script>
+<div style="width: 1500px;">
+<div id="container" style="width: 49%; height: 400px; margin: 0 auto;float: left;border: 1px solid #ccc;margin-right: 5px;"></div>
+<div id="container2" style="width: 50%; height: 400px; margin: 0 auto;float: left;clear: right;border: 1px solid #ccc;"></div>
+</div>
+<script type="text/javascript">
+
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Gender'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                },
+            showInLegend: true
+            }
+        },
+        series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                        name: 'Male',
+                        y: 63.5,
+                        sliced: true,
+                        selected: true
+                    }, {
+                        name: 'Female',
+                        y: 36.5
+
+                    }]
+            }]
+    });
+
+Highcharts.chart('container2', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Gender'
+    },
+    subtitle: {
+        text: 'source:Kalboard 360'
+    },
+    xAxis: {
+        categories: [
+            'Male',
+            'Female',
+            
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'count'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Low',
+        data: [103, 24]
+
+    }, {
+        name: 'Medium',
+        data: [135, 76]
+
+    }, {
+        name: 'High',
+        data: [67, 75]
+
+    
+    }]
+});
+		</script>
