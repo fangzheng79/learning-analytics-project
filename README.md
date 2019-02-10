@@ -24,12 +24,14 @@ This is an analytics and visualization project for learning analytics course in 
 - XGBoost
 
 ## Visualizations:
--The demographic attributes are visualized by pie chart and bar chart:
+- The demographic attributes are visualized by pie chart and bar chart:
 ![image](https://github.com/francisjigo2/pictures/blob/master/pie%20chart.png)
 ![image](https://github.com/francisjigo2/pictures/blob/master/bar%20chart.png)
--The academic background attributes are visualized by stacked bar chart:
+
+- The academic background attributes are visualized by stacked bar chart:
 ![image](https://github.com/francisjigo2/pictures/blob/master/stacked%20bar%20chart.png)
--The behavioral attributes are visualized by box plot:
+
+- The behavioral attributes are visualized by box plot:
 ![image](https://github.com/francisjigo2/pictures/blob/master/box%20plot.png)
 
 ## How to run the project:
