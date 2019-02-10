@@ -26,7 +26,7 @@ This is an analytics and visualization project for learning analytics course in 
 ## Visualizations:
 
 ## How to run the project:
-Here is a simple demo on [Youtube](https://www.youtube.com/channel/UCnd68a620uGBYMjfuVE0xjA?disable_polymer=true)
+Here is a simple demo on [Youtube](https://youtu.be/iTDjJYPjA1o)
 <br>
 - clone the repository
 - configure the local database
