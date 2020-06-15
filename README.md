@@ -7,7 +7,7 @@ This is an analytics and visualization project for learning analytics course in 
 - Apply the machine learning algorithms on the dataset to determine most important features and attempt to predict the students performance based on these features.
 
 ## Project Architecture
-![image](https://github.com/francisjigo2/pictures/blob/master/architecture.png)
+![image](https://github.com/francisjigo2/learning-analytics-project/pictures/blob/master/architecture.png)
 
 
 ## Technologies: 
