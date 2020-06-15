@@ -7,7 +7,7 @@ This is an analytics and visualization project for learning analytics course in 
 - Apply the machine learning algorithms on the dataset to determine most important features and attempt to predict the students performance based on these features.
 
 ## Project Architecture
-![image](https://github.com/francisjigo2/learning-analytics-project/pictures/blob/master/architecture.png)
+![image](https://github.com/francisjigo2/learning-analytics-project/blob/master/pictures/architecture.png)
 
 
 ## Technologies: 
@@ -25,14 +25,14 @@ This is an analytics and visualization project for learning analytics course in 
 
 ## Visualizations:
 - The demographic attributes are visualized by pie chart and bar chart:
-![image](https://github.com/francisjigo2/pictures/blob/master/pie%20chart.png)
-![image](https://github.com/francisjigo2/pictures/blob/master/bar%20chart.png)
+![image](https://github.com/francisjigo2/learning-analytics-project/blob/master/pictures/pie%20chart.png)
+![image](https://github.com/francisjigo2/learning-analytics-project/blob/master/pictures/bar%20chart.png)
 
 - The academic background attributes are visualized by stacked bar chart:
-![image](https://github.com/francisjigo2/pictures/blob/master/stacked%20bar%20chart.png)
+![image](https://github.com/francisjigo2/learning-analytics-project/blob/master/pictures/stacked%20bar%20chart.png)
 
 - The behavioral attributes are visualized by box plot:
-![image](https://github.com/francisjigo2/pictures/blob/master/box%20plot.png)
+![image](https://github.com/francisjigo2/learning-analytics-project/blob/master/pictures/box%20plot.png)
 
 ## How to run the project:
 Here is a simple demo on [Youtube](https://youtu.be/iTDjJYPjA1o)
